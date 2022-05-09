@@ -7,12 +7,12 @@
 	for i in 1 2 3; do env | grep TERM; date ; sleep 20; done
 
 * Buildando o Docker e enviando para DockerHub
-	criar dockerfile
-	docker build
-	docker image push
+Dockerfile
+Docker build
+Docker image push
 
 * Criação do Cluster Kubernetes
-instalação K3d: curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash
+Instalação K3d: curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash
 Criação do cluster: k3d cluster create 2rpnet-cluster
 
 * Criação do Yaml da Secret:
