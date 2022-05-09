@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: show-log-deployment
+spec:
+  selector:
+    matchLabels:
+      app: show-log-deployment
+  template:
+    metadata:
+      labels:
+        app: show-log-deployment
+    spec:
+      containers:
+      - name: show-log-deployment
+        env:
+      - name: TWORPTEST
+        valueFrom:
+          secretKeyRef:
+            name: 2rpnet-mysecret
+            key: TWORPTEST
+        image: araujoajoao/show-log:latest
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "100m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
