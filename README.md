@@ -1,6 +1,6 @@
 # Para entrega do desafio foram definidas 7 etapas:
 
-* 1- Criação da Aplicação
+* Criação da Aplicação
 ```
 Exibir de 20 em 20 segundos no Log do Pod (um valor de uma secret)
 Chave (Nome da Variável): TWORPTEST  
